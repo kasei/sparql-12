@@ -21,6 +21,7 @@
 	mf:name "xsd:dateTime, xsd:date, xsd:time subtraction 01" ;
 	rdfs:comment "This tests the expected values of the XSD operators: op:subtract-dateTimes, op:subtract-dates, op:subtract-times" ;
 	rdfs:comment "Subtract like-typed values: dateTime-dateTime, date-date, time-time" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <dateTime_subtract-01.rq> ] ;
@@ -31,6 +32,7 @@
 	mf:name "xsd:yearMonthDuration addition 01" ;
 	rdfs:comment "This tests the expected values of the XSD operators: op:add-yearMonthDuration-to-date, op:add-yearMonthDuration-to-dateTime" ;
 	rdfs:comment "Add a xsd:yearMonthDuration to each type: dateTime, date" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <yearMonthDuration_add-01.rq> ] ;
@@ -41,6 +43,7 @@
 	mf:name "xsd:dayTimeDuration addition 01" ;
 	rdfs:comment "This tests the expected values of the XSD operators: op:add-dayTimeDuration-to-time, op:add-dayTimeDuration-to-date, op:add-dayTimeDuration-to-dateTime" ;
 	rdfs:comment "Add a xsd:dayTimeDuration to each type: dateTime, date, time" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <dayTimeDuration_add-01.rq> ] ;
@@ -51,6 +54,7 @@
 	mf:name "xsd:yearMonthDuration subtraction 01" ;
 	rdfs:comment "This tests the expected values of the XSD operators: op:subtract-yearMonthDuration-from-date, op:subtract-yearMonthDuration-from-dateTime" ;
 	rdfs:comment "Subtract a xsd:yearMonthDuration from each type: dateTime, date" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <yearMonthDuration_subtract-01.rq> ] ;
@@ -61,6 +65,7 @@
 	mf:name "xsd:dayTimeDuration subtraction 01" ;
 	rdfs:comment "This tests the expected values of the XSD operators: op:subtract-dayTimeDuration-from-time, op:subtract-dayTimeDuration-from-date, op:subtract-dayTimeDuration-from-dateTime" ;
 	rdfs:comment "Subtract a xsd:dayTimeDuration from each type: dateTime, date, time" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <dayTimeDuration_subtract-01.rq> ] ;
