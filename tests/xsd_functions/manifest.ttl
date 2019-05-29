@@ -22,6 +22,7 @@
 	# op:subtract-dates
 	# op:subtract-times
 	mf:name "xsd:dateTime, xsd:date, xsd:time subtraction 01" ;
+	rdfs:comment "Subtract like-typed values: dateTime-dateTime, date-date, time-time" ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <dateTime_subtract-01.rq> ] ;
@@ -32,6 +33,7 @@
 	# op:add-yearMonthDuration-to-date
 	# op:add-yearMonthDuration-to-dateTime
 	mf:name "xsd:yearMonthDuration addition 01" ;
+	rdfs:comment "Add a xsd:yearMonthDuration to each type: dateTime, date" ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <yearMonthDuration_add-01.rq> ] ;
@@ -43,6 +45,7 @@
 	# op:add-dayTimeDuration-to-date
 	# op:add-dayTimeDuration-to-dateTime
 	mf:name "xsd:dayTimeDuration addition 01" ;
+	rdfs:comment "Add a xsd:dayTimeDuration to each type: dateTime, date, time" ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <dayTimeDuration_add-01.rq> ] ;
@@ -53,6 +56,7 @@
 	# op:subtract-yearMonthDuration-from-date
 	# op:subtract-yearMonthDuration-from-dateTime
 	mf:name "xsd:yearMonthDuration subtraction 01" ;
+	rdfs:comment "Subtract a xsd:yearMonthDuration from each type: dateTime, date" ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <yearMonthDuration_subtract-01.rq> ] ;
@@ -64,6 +68,7 @@
 	# op:subtract-dayTimeDuration-from-date
 	# op:subtract-dayTimeDuration-from-dateTime
 	mf:name "xsd:dayTimeDuration subtraction 01" ;
+	rdfs:comment "Subtract a xsd:dayTimeDuration from each type: dateTime, date, time" ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
 		[ qt:query <dayTimeDuration_subtract-01.rq> ] ;
