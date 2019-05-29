@@ -24,8 +24,8 @@
 	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
-		[ qt:query <dateTime_subtract-01.rq> ] ;
-	mf:result  <dateTime_subtract-01.srx> ;
+		[ qt:query <duration_dateTime_subtract-01.rq> ] ;
+	mf:result  <duration_dateTime_subtract-01.srx> ;
 	.
 
 :duration_yearMonth_add01 a mf:QueryEvaluationTest ;
@@ -35,8 +35,8 @@
 	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
-		[ qt:query <yearMonthDuration_add-01.rq> ] ;
-	mf:result  <yearMonthDuration_add-01.srx> ;
+		[ qt:query <duration_yearMonthDuration_add-01.rq> ] ;
+	mf:result  <duration_yearMonthDuration_add-01.srx> ;
 	.
 
 :duration_dayTime_add01 a mf:QueryEvaluationTest ;
@@ -46,8 +46,8 @@
 	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
-		[ qt:query <dayTimeDuration_add-01.rq> ] ;
-	mf:result  <dayTimeDuration_add-01.srx> ;
+		[ qt:query <duration_dayTimeDuration_add-01.rq> ] ;
+	mf:result  <duration_dayTimeDuration_add-01.srx> ;
 	.
 
 :duration_yearMonth_subtract01 a mf:QueryEvaluationTest ;
@@ -57,8 +57,8 @@
 	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
-		[ qt:query <yearMonthDuration_subtract-01.rq> ] ;
-	mf:result  <yearMonthDuration_subtract-01.srx> ;
+		[ qt:query <duration_yearMonthDuration_subtract-01.rq> ] ;
+	mf:result  <duration_yearMonthDuration_subtract-01.srx> ;
 	.
 
 :duration_dayTime_subtract01 a mf:QueryEvaluationTest ;
@@ -68,6 +68,6 @@
 	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
-		[ qt:query <dayTimeDuration_subtract-01.rq> ] ;
-	mf:result  <dayTimeDuration_subtract-01.srx> ;
+		[ qt:query <duration_dayTimeDuration_subtract-01.rq> ] ;
+	mf:result  <duration_dayTimeDuration_subtract-01.srx> ;
 	.
