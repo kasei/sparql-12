@@ -1,0 +1,71 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix :       <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/functions/manifest#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix sparql: <http://www.w3.org/ns/sparql#> .
+
+<>	a mf:Manifest ;
+	rdfs:label "XSD Functions and Operators" ;
+	mf:entries (
+		# Arithmetic operators on XSD durations, dates and times
+		:dateTime_subtract01 # op:subtract-dateTimes, op:subtract-dates, op:subtract-times
+		:duration_yearMonth_add01 # op:add-yearMonthDuration-to-dateTime, op:add-yearMonthDuration-to-date
+		:duration_dayTime_add01 # op:add-dayTimeDuration-to-dateTime, op:add-dayTimeDuration-to-date, op:add-dayTimeDuration-to-time
+		:duration_yearMonth_subtract01 # op:subtract-yearMonthDuration-from-dateTime, op:subtract-yearMonthDuration-from-date
+		:duration_dayTime_subtract01 # op:subtract-dayTimeDuration-from-dateTime, op:subtract-dayTimeDuration-from-date, op:subtract-dayTimeDuration-from-time
+	) .
+
+:dateTime_subtract01 a mf:QueryEvaluationTest ;
+	# op:subtract-dateTimes
+	# op:subtract-dates
+	# op:subtract-times
+	mf:name "xsd:dateTime, xsd:date, xsd:time subtraction 01" ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <dateTime_subtract-01.rq> ] ;
+	mf:result  <dateTime_subtract-01.srx> ;
+	.
+
+:duration_yearMonth_add01 a mf:QueryEvaluationTest ;
+	# op:add-yearMonthDuration-to-date
+	# op:add-yearMonthDuration-to-dateTime
+	mf:name "xsd:yearMonthDuration addition 01" ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <yearMonthDuration_add-01.rq> ] ;
+	mf:result  <yearMonthDuration_add-01.srx> ;
+	.
+
+:duration_dayTime_add01 a mf:QueryEvaluationTest ;
+	# op:add-dayTimeDuration-to-time
+	# op:add-dayTimeDuration-to-date
+	# op:add-dayTimeDuration-to-dateTime
+	mf:name "xsd:dayTimeDuration addition 01" ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <dayTimeDuration_add-01.rq> ] ;
+	mf:result  <dayTimeDuration_add-01.srx> ;
+	.
+
+:duration_yearMonth_subtract01 a mf:QueryEvaluationTest ;
+	# op:subtract-yearMonthDuration-from-date
+	# op:subtract-yearMonthDuration-from-dateTime
+	mf:name "xsd:yearMonthDuration subtraction 01" ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <yearMonthDuration_subtract-01.rq> ] ;
+	mf:result  <yearMonthDuration_subtract-01.srx> ;
+	.
+
+:duration_dayTime_subtract01 a mf:QueryEvaluationTest ;
+	# op:subtract-dayTimeDuration-from-time
+	# op:subtract-dayTimeDuration-from-date
+	# op:subtract-dayTimeDuration-from-dateTime
+	mf:name "xsd:dayTimeDuration subtraction 01" ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <dayTimeDuration_subtract-01.rq> ] ;
+	mf:result  <dayTimeDuration_subtract-01.srx> ;
+	.
