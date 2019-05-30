@@ -9,6 +9,10 @@
 <>	a mf:Manifest ;
 	rdfs:label "XSD Functions and Operators" ;
 	mf:entries (
+		# 9.5 Component extraction functions on dates and times
+		:extract_date01
+		:extract_time01
+		
 		# 9.7 Arithmetic operators on durations, dates and times
 		:dateTime_subtract01
 		:duration_yearMonth_add01
@@ -24,6 +28,26 @@
 		:constructor_duration01
 		:constructor_duration02
 	) .
+
+:extract_date01 a mf:QueryEvaluationTest ;
+	mf:name "extract xsd:date components 01" ;
+	rdfs:comment "This tests functions to extract compoents from xsd:date values" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#component-extraction-dateTime> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <extract_date-01.rq> ] ;
+	mf:result  <extract_date-01.srx> ;
+	.
+
+:extract_time01 a mf:QueryEvaluationTest ;
+	mf:name "extract xsd:time components 01" ;
+	rdfs:comment "This tests functions to extract compoents from xsd:time values" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#component-extraction-dateTime> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <extract_time-01.rq> ] ;
+	mf:result  <extract_time-01.srx> ;
+	.
 
 :dateTime_subtract01 a mf:QueryEvaluationTest ;
 	mf:name "xsd:dateTime, xsd:date, xsd:time subtraction 01" ;

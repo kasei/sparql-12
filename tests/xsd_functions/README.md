@@ -38,13 +38,13 @@ Checkboxes indicate whether there is (at least minimal) test coverage in the inc
 
 ### [9.5 Component extraction functions on dates and times](https://www.w3.org/TR/xpath-functions/#component-extraction-dateTime)
 
-- [ ]	`fn:year-from-date`
-- [ ]	`fn:month-from-date`
-- [ ]	`fn:day-from-date`
+- [x]	`fn:year-from-date`
+- [x]	`fn:month-from-date`
+- [x]	`fn:day-from-date`
 - [ ]	`fn:timezone-from-date`
-- [ ]	`fn:hours-from-time`
-- [ ]	`fn:minutes-from-time`
-- [ ]	`fn:seconds-from-time`
+- [x]	`fn:hours-from-time`
+- [x]	`fn:minutes-from-time`
+- [x]	`fn:seconds-from-time`
 - [ ]	`fn:timezone-from-time`
 
 ### [9.6 Timezone adjustment functions on dates and time values](https://www.w3.org/TR/xpath-functions/#timezone.functions)
@@ -82,3 +82,9 @@ Checkboxes indicate whether there is (at least minimal) test coverage in the inc
 - [x]	`xsd:date`
 - [x]	`xsd:time`
 - [x]	`xsd:duration`
+
+## TODO
+
+* Support for timezones in xsd:date
+* Support for timezones in xsd:time
+* Correct construction of xsd:dateTime `1999-12-31T24:00:00`
