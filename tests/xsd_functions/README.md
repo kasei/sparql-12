@@ -8,7 +8,11 @@ Checkboxes indicate whether there is (at least minimal) test coverage in the inc
 
 ### [8.2 Comparison operators on durations](https://www.w3.org/TR/xpath-functions/#comp.duration)
 
-@@ TODO: should these be supported?
+- [x] `op:yearMonthDuration-less-than`
+- [x] `op:yearMonthDuration-greater-than`
+- [x] `op:dayTimeDuration-less-than`
+- [x] `op:dayTimeDuration-greater-than`
+- [x] `op:duration-equal`
 
 ### [8.3 Component extraction functions on durations](https://www.w3.org/TR/xpath-functions/#component-extraction-durations)
 

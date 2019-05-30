@@ -9,6 +9,11 @@
 <>	a mf:Manifest ;
 	rdfs:label "XSD Functions and Operators" ;
 	mf:entries (
+		# 8.2 Comparison operators on durations
+		:compare_duration01
+		:compare_yearMonthDuration01
+		:compare_dayTimeDuration01
+		
 		# 9.4 Comparison operators on duration, date and time values
 		:compare_time01
 		
@@ -32,8 +37,38 @@
 		:constructor_duration02
 	) .
 
+:compare_duration01 a mf:QueryEvaluationTest ;
+	mf:name "compare xsd:duration values 01" ;
+	rdfs:comment "This tests the equality operator on xsd:duration values" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#func-duration-equal> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <compare_duration-01.rq> ] ;
+	mf:result  <compare_duration-01.srx> ;
+	.
+
+:compare_yearMonthDuration01 a mf:QueryEvaluationTest ;
+	mf:name "compare xsd:yearMonthDuration values 01" ;
+	rdfs:comment "This tests comparison operators on xsd:yearMonthDuration values" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#comp.duration> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <compare_yearMonthDuration-01.rq> ] ;
+	mf:result  <compare_yearMonthDuration-01.srx> ;
+	.
+
+:compare_dayTimeDuration01 a mf:QueryEvaluationTest ;
+	mf:name "compare xsd:dayTimeDuration values 01" ;
+	rdfs:comment "This tests comparison operators on xsd:dayTimeDuration values" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#comp.duration> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <compare_dayTimeDuration-01.rq> ] ;
+	mf:result  <compare_dayTimeDuration-01.srx> ;
+	.
+
 :compare_time01 a mf:QueryEvaluationTest ;
-	mf:name "extract xsd:date components 01" ;
+	mf:name "compare xsd:date values 01" ;
 	rdfs:comment "This tests comparison operators on xsd:time values" ;
 	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#comp.datetime> ;
 	dawgt:approval dawgt:Proposed ;
