@@ -18,8 +18,11 @@
 		
 		# 9.9 Parsing dates and times
 		:constructor_date01
+		:constructor_date02
 		:constructor_time01
+		:constructor_time02
 		:constructor_duration01
+		:constructor_duration02
 	) .
 
 :dateTime_subtract01 a mf:QueryEvaluationTest ;
@@ -87,6 +90,16 @@
 	mf:result  <construct_date-01.srx> ;
 	.
 
+:constructor_date02 a mf:QueryEvaluationTest ;
+	mf:name "xsd:date construction 02" ;
+	rdfs:comment "This tests error cases when parsing xsd:date values from string literals" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#parsing-dates-and-times> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <construct_date-02.rq> ] ;
+	mf:result  <construct_date-02.srx> ;
+	.
+
 :constructor_time01 a mf:QueryEvaluationTest ;
 	mf:name "xsd:time construction 01" ;
 	rdfs:comment "This tests the expected result of parsing xsd:time values from string literals" ;
@@ -98,6 +111,16 @@
 	mf:result  <construct_time-01.srx> ;
 	.
 
+:constructor_time02 a mf:QueryEvaluationTest ;
+	mf:name "xsd:time construction 02" ;
+	rdfs:comment "This tests error cases when parsing xsd:time values from string literals" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#parsing-dates-and-times> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <construct_time-02.rq> ] ;
+	mf:result  <construct_time-02.srx> ;
+	.
+
 :constructor_duration01 a mf:QueryEvaluationTest ;
 	mf:name "xsd:duration construction 01" ;
 	rdfs:comment "This tests the expected result of parsing xsd:duration values from string literals" ;
@@ -107,4 +130,14 @@
 	mf:action
 		[ qt:query <construct_duration-01.rq> ] ;
 	mf:result  <construct_duration-01.srx> ;
+	.
+
+:constructor_duration02 a mf:QueryEvaluationTest ;
+	mf:name "xsd:duration construction 02" ;
+	rdfs:comment "This tests error cases when parsing xsd:duration values from string literals" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#parsing-dates-and-times> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <construct_duration-02.rq> ] ;
+	mf:result  <construct_duration-02.srx> ;
 	.

@@ -79,6 +79,6 @@ Checkboxes indicate whether there is (at least minimal) test coverage in the inc
 
 @@ TODO: Should the XSD parsing algorithm be supported, or is casting using SPARQL's [XPath Constructor Function](https://www.w3.org/TR/sparql11-query/#FunctionMapping) style sufficient?
 
-- [ ]	`xsd:date`
-- [ ]	`xsd:time`
-- [ ]	`xsd:duration`
+- [x]	`xsd:date`
+- [x]	`xsd:time`
+- [x]	`xsd:duration`
