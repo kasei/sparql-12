@@ -9,12 +9,17 @@
 <>	a mf:Manifest ;
 	rdfs:label "XSD Functions and Operators" ;
 	mf:entries (
-		# Arithmetic operators on XSD durations, dates and times
+		# 9.7 Arithmetic operators on durations, dates and times
 		:dateTime_subtract01
 		:duration_yearMonth_add01
 		:duration_dayTime_add01
 		:duration_yearMonth_subtract01
 		:duration_dayTime_subtract01
+		
+		# 9.9 Parsing dates and times
+		:constructor_date01
+		:constructor_time01
+		:constructor_duration01
 	) .
 
 :dateTime_subtract01 a mf:QueryEvaluationTest ;
@@ -24,8 +29,8 @@
 	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#dateTime-arithmetic> ;
 	dawgt:approval dawgt:Proposed ;
 	mf:action
-		[ qt:query <duration_dateTime_subtract-01.rq> ] ;
-	mf:result  <duration_dateTime_subtract-01.srx> ;
+		[ qt:query <dateTime_subtract-01.rq> ] ;
+	mf:result  <dateTime_subtract-01.srx> ;
 	.
 
 :duration_yearMonth_add01 a mf:QueryEvaluationTest ;
@@ -70,4 +75,36 @@
 	mf:action
 		[ qt:query <duration_dayTimeDuration_subtract-01.rq> ] ;
 	mf:result  <duration_dayTimeDuration_subtract-01.srx> ;
+	.
+
+:constructor_date01 a mf:QueryEvaluationTest ;
+	mf:name "xsd:date construction 01" ;
+	rdfs:comment "This tests the expected result of parsing xsd:date values from string literals" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#parsing-dates-and-times> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <construct_date-01.rq> ] ;
+	mf:result  <construct_date-01.srx> ;
+	.
+
+:constructor_time01 a mf:QueryEvaluationTest ;
+	mf:name "xsd:time construction 01" ;
+	rdfs:comment "This tests the expected result of parsing xsd:time values from string literals" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#parsing-dates-and-times> ;
+	mf:requires mf:XSDValueCanonicalization ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <construct_time-01.rq> ] ;
+	mf:result  <construct_time-01.srx> ;
+	.
+
+:constructor_duration01 a mf:QueryEvaluationTest ;
+	mf:name "xsd:duration construction 01" ;
+	rdfs:comment "This tests the expected result of parsing xsd:duration values from string literals" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#parsing-dates-and-times> ;
+	mf:requires mf:XSDValueCanonicalization ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <construct_duration-01.rq> ] ;
+	mf:result  <construct_duration-01.srx> ;
 	.

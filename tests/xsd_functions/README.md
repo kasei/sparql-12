@@ -77,7 +77,7 @@ Checkboxes indicate whether there is (at least minimal) test coverage in the inc
 
 ### [9.9 Parsing dates and times](https://www.w3.org/TR/xpath-functions/#parsing-dates-and-times)
 
-This is probably handled by SPARQL's [XPath Constructor Function](https://www.w3.org/TR/sparql11-query/#FunctionMapping) style:
+@@ TODO: Should the XSD parsing algorithm be supported, or is casting using SPARQL's [XPath Constructor Function](https://www.w3.org/TR/sparql11-query/#FunctionMapping) style sufficient?
 
 - [ ]	`xsd:date`
 - [ ]	`xsd:time`
