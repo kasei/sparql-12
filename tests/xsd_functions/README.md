@@ -27,9 +27,9 @@ Checkboxes indicate whether there is (at least minimal) test coverage in the inc
 - [ ] `op:date-equal`
 - [ ] `op:date-less-than`
 - [ ] `op:date-greater-than`
-- [ ] `op:time-equal`
-- [ ] `op:time-less-than`
-- [ ] `op:time-greater-than`
+- [x] `op:time-equal`
+- [x] `op:time-less-than`
+- [x] `op:time-greater-than`
 - [ ] `op:gYearMonth-equal`
 - [ ] `op:gYear-equal`
 - [ ] `op:gMonthDay-equal`
@@ -88,3 +88,4 @@ Checkboxes indicate whether there is (at least minimal) test coverage in the inc
 * Support for timezones in xsd:date
 * Support for timezones in xsd:time
 * Correct construction of xsd:dateTime `1999-12-31T24:00:00`
+* XPath 3.1 differs from 2.0 (which SPARQL 1.1 uses) in its use of an implicit timezone. I believe this means all date/time values are comparable, unlike 2.0 which [can yield indeterminate comparisons](https://www.w3.org/TR/xmlschema-2/#dateTime-order)

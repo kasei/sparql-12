@@ -9,6 +9,9 @@
 <>	a mf:Manifest ;
 	rdfs:label "XSD Functions and Operators" ;
 	mf:entries (
+		# 9.4 Comparison operators on duration, date and time values
+		:compare_time01
+		
 		# 9.5 Component extraction functions on dates and times
 		:extract_date01
 		:extract_time01
@@ -28,6 +31,16 @@
 		:constructor_duration01
 		:constructor_duration02
 	) .
+
+:compare_time01 a mf:QueryEvaluationTest ;
+	mf:name "extract xsd:date components 01" ;
+	rdfs:comment "This tests comparison operators on xsd:time values" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#comp.datetime> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <compare_time-01.rq> ] ;
+	mf:result  <compare_time-01.srx> ;
+	.
 
 :extract_date01 a mf:QueryEvaluationTest ;
 	mf:name "extract xsd:date components 01" ;
