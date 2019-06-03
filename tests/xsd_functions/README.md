@@ -53,7 +53,7 @@ Checkboxes indicate whether there is (at least minimal) test coverage in the inc
 
 ### [9.6 Timezone adjustment functions on dates and time values](https://www.w3.org/TR/xpath-functions/#timezone.functions)
 
-- [ ] `fn:adjust-dateTime-to-timezone`
+- [x] `fn:adjust-dateTime-to-timezone`
 - [ ] `fn:adjust-date-to-timezone`
 - [ ] `fn:adjust-time-to-timezone`
 

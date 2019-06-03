@@ -21,6 +21,9 @@
 		:extract_date01
 		:extract_time01
 		
+		# 9.6 Timezone adjustment functions on dates and time values
+		:adjust_dateTime01
+		
 		# 9.7 Arithmetic operators on durations, dates and times
 		:dateTime_subtract01
 		:duration_yearMonth_add01
@@ -95,6 +98,16 @@
 	mf:action
 		[ qt:query <extract_time-01.rq> ] ;
 	mf:result  <extract_time-01.srx> ;
+	.
+
+:adjust_dateTime01 a mf:QueryEvaluationTest ;
+	mf:name "xsd:dateTime timezone adjustment 01" ;
+	rdfs:comment "This tests ability to change the timezone of an xsd:dateTime value" ;
+	rdfs:seeAlso <https://www.w3.org/TR/xpath-functions/#func-adjust-dateTime-to-timezone> ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <adjust_dateTime-01.rq> ] ;
+	mf:result  <adjust_dateTime-01.srx> ;
 	.
 
 :dateTime_subtract01 a mf:QueryEvaluationTest ;
