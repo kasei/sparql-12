@@ -12,6 +12,7 @@
 		:group_concat_ordering01
 		:group_concat_ordering02
 		:group_concat_ordering03
+		:group_concat_ordering_grouping01
 		:group_concat_ordering_separator01
 	) .
 
@@ -40,6 +41,15 @@
 	mf:action
 		[ qt:query <group_concat_order-03.rq> ] ;
 	mf:result  <group_concat_order-03.srx> ;
+	.
+
+:group_concat_ordering_grouping01 a mf:QueryEvaluationTest ;
+	mf:name "ordering of GROUP_CONCAT inputs within a groups" ;
+	rdfs:comment "Order the aggregation inputs by an integer variable PER group" ;
+	dawgt:approval dawgt:Proposed ;
+	mf:action
+		[ qt:query <group_concat_ordering_grouping-01.rq> ] ;
+	mf:result  <group_concat_ordering_grouping-01.srx> ;
 	.
 
 :group_concat_ordering_separator01 a mf:QueryEvaluationTest ;
