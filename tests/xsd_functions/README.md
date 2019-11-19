@@ -26,7 +26,7 @@ Checkboxes indicate whether there is (at least minimal) test coverage in the inc
 
 ### [9.4 Comparison operators on duration, date and time values](https://www.w3.org/TR/xpath-functions/#comp.datetime)
 
-@@ TODO: Should `gYear`, `gMonth`, and `gDay` be supported?
+@@ TODO: Should `gYearMonth`, `gMonthDay`, `gYear`, `gMonth`, and `gDay` be supported?
 
 - [ ] `op:date-equal`
 - [ ] `op:date-less-than`
