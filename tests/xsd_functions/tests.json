@@ -298,6 +298,59 @@
 				}
 			]
 		},
+		"adjust_date01": {
+			"tests": [
+				{
+					"function": "ADJUST",
+					"operands": [{"@value": "2002-03-07", "@type": "xsd:date"}, {"@value": "-PT10H", "@type": "xsd:dayTimeDuration"}],
+					"result":     {"@value": "2002-03-07-10:00", "@type": "xsd:date"}
+				},
+				{
+					"function": "ADJUST",
+					"operands": [{"@value": "2002-03-07-07:00", "@type": "xsd:date"}, {"@value": "-PT10H", "@type": "xsd:dayTimeDuration"}],
+					"result":     {"@value": "2002-03-06-10:00", "@type": "xsd:date"}
+				},
+				{
+					"function": "ADJUST",
+					"operands": [{"@value": "2002-03-07", "@type": "xsd:date"}, ""],
+					"result":     {"@value": "2002-03-07", "@type": "xsd:date"}
+				},
+				{
+					"function": "ADJUST",
+					"operands": [{"@value": "2002-03-07-07:00", "@type": "xsd:date"}, ""],
+					"result":     {"@value": "2002-03-07", "@type": "xsd:date"}
+				}
+			]
+		},
+		"adjust_time01": {
+			"tests": [
+				{
+					"function": "ADJUST",
+					"operands": [{"@value": "10:00:00", "@type": "xsd:time"}, {"@value": "-PT10H", "@type": "xsd:dayTimeDuration"}],
+					"result":     {"@value": "10:00:00-10:00", "@type": "xsd:time"}
+				},
+				{
+					"function": "ADJUST",
+					"operands": [{"@value": "10:00:00-07:00", "@type": "xsd:time"}, {"@value": "-PT10H", "@type": "xsd:dayTimeDuration"}],
+					"result":     {"@value": "07:00:00-10:00", "@type": "xsd:time"}
+				},
+				{
+					"function": "ADJUST",
+					"operands": [{"@value": "10:00:00-07:00", "@type": "xsd:time"}, {"@value": "PT10H", "@type": "xsd:dayTimeDuration"}],
+					"result":     {"@value": "03:00:00+10:00", "@type": "xsd:time"}
+				},
+				{
+					"function": "ADJUST",
+					"operands": [{"@value": "10:00:00", "@type": "xsd:time"}, ""],
+					"result":     {"@value": "10:00:00", "@type": "xsd:time"}
+				},
+				{
+					"function": "ADJUST",
+					"operands": [{"@value": "10:00:00-07:00", "@type": "xsd:time"}, ""],
+					"result":     {"@value": "10:00:00", "@type": "xsd:time"}
+				}
+			]
+		},
 		"dateTime_subtract01": {
 			"tests": [
 				{
